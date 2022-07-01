@@ -4,11 +4,11 @@
 
 using namespace Keyhan;
 
-Texture::Texture(SDL_Renderer* renderer) {
+Texture::Texture() {
 	this->sdl_texture = nullptr;
 	this->width = 0;
 	this->height = 0;
-	this->renderer = renderer;
+	this->renderer = nullptr;
 }
 
 Texture::~Texture() {
@@ -53,5 +53,9 @@ unsigned int Texture::GetHeight() {
 }
 
 unsigned int Texture::GetWidth() {
-	return this->width
+	return this->width;
+}
+
+void Texture::SetRenderer(SDL_Renderer* rend) {
+	this->renderer = rend;
 }

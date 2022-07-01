@@ -174,6 +174,7 @@
     <ClInclude Include="quickmath.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="TexturedEntity.h" />
     <ClInclude Include="UUIDGen.h" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,7 @@
     </ClCompile>
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TexturedEntity.cpp" />
     <ClCompile Include="UUIDGen.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

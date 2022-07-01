@@ -5,16 +5,16 @@
 #include <SDL/SDL.h>
 
 namespace Keyhan {
-	class KEYHAN_API Texture {
+	class Texture {
 	public:
-		Texture(SDL_Renderer* renderer);
+		Texture();
 		~Texture();
 
 		void         LoadFromFile(std::string path, bool colorKey);
 		void         Free();
 		unsigned int GetWidth();
 		unsigned int GetHeight();
-
+		void		 SetRenderer(SDL_Renderer* rend);
 	private:
 		unsigned int width, height;
 		SDL_Texture* sdl_texture;

@@ -1,27 +1,24 @@
 #pragma once
-#pragma comment(lib, "rpcrt4.lib")
 #include "api.h"
+#include "UUIDGen.h"
 #include "quickmath.h"
 #include <Windows.h>
 #include <string>
 
 namespace Keyhan {
-	class KEYHAN_API Entity {
+	class __declspec(dllexport) Entity {
+	protected:
 		Vector2D position;
-		UUID uuid;
-		std::string id;
+		ID uuid;
+		const std::string class_name = "Entity";
 
-		void SetID();
 	public:
 		Vector2D getPosition();
 		void setPosition(int x, int y);
-		void setPosition(int x, int y);
+		void setPosition(Vector2D pos);
 		
 		Entity(int x, int y);
 		Entity(Vector2D pos);
 		Entity();
-		~Entity();
 	};
 };
-
-//TODO: Create a cross-platform id class later on

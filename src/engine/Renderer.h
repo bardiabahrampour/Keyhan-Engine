@@ -7,7 +7,7 @@
 typedef std::function<void()> LoopFunc;
 
 namespace Keyhan {
-	class KEYHAN_API Renderer {
+	class __declspec(dllexport) Renderer {
 	public:
 		Renderer();
 		~Renderer();

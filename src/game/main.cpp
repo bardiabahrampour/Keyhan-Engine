@@ -1,12 +1,12 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
-#include <Windows.h>
-#include <iostream>
 #include <exception>
+#include "UUIDGen.h"
+#include <Windows.h>
 
 #define PATH_TO_PLACEHOLDER "assets/test/placeholder.png"
 
-const int width = 1920, height = 1080;
+const int width = 960, height = 540;
 
 SDL_Window* gwindow = nullptr;
 SDL_Renderer* grenderer = nullptr;
@@ -102,6 +102,10 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance,
 
 	SDL_Event e;
 	bool w = false;
+
+	Keyhan::ID id;
+	id.GenerateID("helllo");
+	OutputDebugStringA(id.GetStringID().c_str());
 
 	while (!w) {
 		while (SDL_PollEvent(&e) != 0) {
