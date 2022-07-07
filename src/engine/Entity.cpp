@@ -1,15 +1,15 @@
 #include "Entity.h"
 
-Keyhan::Vector2D Keyhan::Entity::getPosition() {
+Keyhan::Vector2D Keyhan::Entity::GetPosition() {
 	return this->position;
 }
 
-void Keyhan::Entity::setPosition(int x, int y) {
+void Keyhan::Entity::SetPosition(int x, int y) {
 	this->position.x = x;
 	this->position.y = y;
 }
 
-void Keyhan::Entity::setPosition(Vector2D pos) {
+void Keyhan::Entity::SetPosition(Vector2D pos) {
 	this->position = pos;
 }
 
@@ -26,6 +26,6 @@ Keyhan::Entity::Entity(Vector2D pos) {
 
 //DO NOT USE THIS!!
 Keyhan::Entity::Entity() {
-	this->setPosition(0, 0);
+	this->SetPosition(0, 0);
 	uuid.GenerateID(class_name);
 }

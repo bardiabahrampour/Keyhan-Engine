@@ -16,8 +16,8 @@ namespace Keyhan {
 		unsigned int GetHeight();
 		void		 SetRenderer(SDL_Renderer* rend);
 	private:
-		unsigned int width, height;
-		SDL_Texture* sdl_texture;
+		unsigned int  width, height;
+		SDL_Texture*  sdl_texture;
 		SDL_Renderer* renderer;
 	};
 };

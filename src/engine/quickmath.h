@@ -2,8 +2,12 @@
 #include "api.h"
 
 namespace Keyhan {
-	typedef struct KEYHAN_API Vector2D {
+	typedef struct Vector2D {
 		int x;
 		int y;
-	}Vector2D;
+	} Vector2D;
+
+	typedef struct Color {
+		unsigned char r, g, b, a;
+	} Color;
 };
